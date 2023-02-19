@@ -1,0 +1,23 @@
+/*
+ * Selector:  el elemento al que aplicamos estilos
+ * Propiedad: lo que vamos modificar (cambiar)
+ * Valor:     el nuevo valor que va tener la propiedad
+ * Propiedad: valor; -> se denomina declaracion
+ * 
+ * al conjunto de selector mas declaracions se le denomina regla.
+ */
+
+/*
+selector { -> regla (rule)
+    propiedad: valor; -> declaracion (statement)
+    propiedad: valor;
+    propiedad: valor;
+    propiedad: valor;
+    propiedad: valor;
+    propiedad: valor;
+    property: value
+}
+*/
+
+/* las declaraciones pueden ser tantas como sea necesario */
+/* en la ultima regla no es necesario el (punto y coma) */

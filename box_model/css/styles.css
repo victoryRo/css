@@ -1,0 +1,135 @@
+body {
+	background-color: #444;
+	color: #fafafa;
+	margin: 0;
+}
+
+/**
+ * margin 
+ * 4 valores -> margin: top rigth bottom left
+ * 3 valores -> margin: top left/right bottom
+ * 2 valores -> margin: top/bottom left/right
+ * 1 valor   -> margin: top/right/bottom/left
+ */
+ 
+ /**
+ * padding 
+ * 4 valores -> padding: top rigth bottom left
+ * 3 valores -> padding: top left/right bottom
+ * 2 valores -> padding: top/bottom left/right
+ * 1 valor   -> padding: top/right/bottom/left
+ */
+
+/*
+ * border:
+ *   propiedad que permite modificar el borde de la caja
+ *   y tiene todo tipo de opciones de manera individual ejemplo
+ *   right, top, bottom, styles etc.....
+ *       border-width: ancho del borde;
+ *       border-style: estilo delborde;
+ *       border-color: color del borde;
+ */
+
+/*
+ * box-sizing
+ *  esta propiedad nos permite controlar el calculo que hace el navegador
+ *  a la hora de modificar las propiedades content, padding y border
+ *  los valores son:
+ *      content-box -> valor por defecto
+ *      border-box -> calculo del tamaño del elemento
+ *                    incluyendo el padding y el border
+ *
+ *     practica recomenda:
+ *     todas las cajas conservaran su tamaño asignado.
+ *     * {
+ *       box-sizing: border-box;
+ *     }
+ * */
+    
+
+.block {
+	background-color: seagreen;
+	width: 150px;
+	height: 150px;
+	margin-right: auto;
+	margin-left: auto;
+}
+/*
+ * width and height no se aplican a elementos en linea
+ * margin: solo se aplica de forma horizontal
+ * 
+ */
+.inline {
+	background-color: tomato;
+	color: inherit;
+	width: 100px;
+	height: 100px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-left: 350px;
+}
+
+/*examples margin errors */
+
+/** { bad practices not recommended
+	margin: 0;
+	padding: 0;
+}*/
+.block-example {
+	background-color: darkblue;
+	width: 200px;
+	height: 200px;
+	margin-top: 100px;
+	/*margin: 0 auto; para centrar bad practices*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header {
+	background-color: red;
+	height: 50px;
+}
+
+.block-p {
+	background-color: lightblue;
+	width: 200px;
+	height: 200px;
+	margin: 100px;
+	padding: 50px 20px 100px
+}
+.inline-p {
+	background-color: orange;
+    margin-left: 100px;
+    padding: 10px
+}
+
+/* example border property */
+
+.buttons {
+	background-color: steelblue;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 100px
+}
+
+.button {
+	margin-left: 90px;
+	padding: 25px 50px;
+	/*border: 10px solid red;*/
+	border-width: 10px;
+	border-style: dashed;
+	border-color: blue;
+}
+
+.box-sz {
+    background-color: darksalmon;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 20px;
+    border: 5px solid red;
+    box-sizing: border-box;
+}
+
+

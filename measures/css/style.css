@@ -1,0 +1,50 @@
+/* Measures */
+
+/* 
+ * Medidas en css dos grupos, "absolutas y realtivas" 
+ *
+ * las medidas ABSOLUTAS NO CAMBIAN siempre mantendra su tamaño independiente del dispositivo.
+ *     la mas usada es px (pixels) cuya medida es 1/96 de 1in. existen otras como
+ *     cm (cemtimetros) -> 1cm = 96px/2,54
+ *     mm (milimetros) -> 1mm = 1/10 de 1cm
+ *     Q (cuarto de milimetro) -> 1Q = 1/40 de 1cm
+ *     in (inches pulgadas) -> 1in = 2,54cm = 96px
+ *     pc (picas) -> 1pc = 1/16 de 1in
+ *     pt (puntos) -> 1pt = 1/72 de 1in
+ *
+ * las medidas RELATIVAS SIEMPRE dependen de un contexto son las que se recomiendan utilizar
+ * en la gran mayoria de las ocaciones por que nos van a permitir que todos los elementos
+ * escalen proporcionalmente.
+ *    las mas usadas son em, rem, %, vw, vh, vmin, y vmax. aunque tememos otras como.
+ *    ex -> altura x de la fuente del elemento.
+ *    ch -> la medida del ancho del glifo "0" de la letra del elemento.
+ *    lh -> altura de la linea del elemento.
+ *
+ *    rem -> corresponse a la medida de la "m" de la raiz del documento (html)
+ *    em -> corresponde a la medida de la "m" en el contexto donde nos encontremos;
+ *
+ *    El estandar de tamaño de fuente por defecto en la raiz del documento es 16px
+ *    y no es RECOMENDABLE MODIFICARLO.
+ *
+ *    NOTA: tanto "rem" como "em" se calcula en base a la propiedad;
+ *    font-size (tamaño de fuente)
+ *
+ * */
+
+body {
+    background-color: #444;
+    color: lightgreen;
+}
+
+.title {
+    font-size: rem;
+}
+
+.btn {
+    background-color: lightcyan;
+    color: #555;
+    padding: 1em 2em;
+    text-decoration: none;
+    border-radius: 0.5em;
+    font-size: 1rem;
+}

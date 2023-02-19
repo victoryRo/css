@@ -1,0 +1,57 @@
+
+/* 
+ * Border radius:
+ * es la propiedad que nos permite redondear vertices de forma independiente.
+ * 4 propiedades:
+ *     border-top-left-radius
+ *     border-top-right-radius
+ *     border-bottom-left-radius
+ *     border-bottom-right-radius
+ *
+ * si solo recibe un valor dibujara un circulo en cada vertice
+ * del radio que especifiquemos.
+ *     border-radius: 50px; -> circulo con 50px de radio.
+ *
+ * si recibe dos valores dibujara un elipse en el vortice 
+ * que especifiquemos ejemplo
+ *     border-top-right-radius: 50px 100px;
+ *
+ * para mayor claridad se recomenda trabajar con elipse 
+ * de forma individual
+ * */
+
+
+
+body {
+    background-color: #444;
+    color: #fafafa;
+    margin: 0;
+}
+
+.box {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background-color: lightgreen;
+    width: 300px;
+    height: 300px;
+    color: #333;
+
+    /* two sides create an ellipse */
+    /* border-top-left-radius: 50px 100px; */
+
+    /* ellipse on all four sides */
+    /* border-radius: 50px / 100px; */
+
+    /* 2 independent ellipses */
+    border-radius: 50px 100px / 100px 150px;
+
+    /* get the measurement for each side */
+    /* border-radius: 50px 100px 100px 50px; */
+
+    /* individual */
+    /* border-top-left-radius: 50px; */
+    /* border-top-right-radius: 100px; */
+    /* border-bottom-left-radius: 50px; */
+    /* border-bottom-right-radius: 100px; */
+}

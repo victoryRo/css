@@ -1,0 +1,127 @@
+/* 
+ * TIPOGRAFIA
+ * ciencia que estudia el diseño y uso de los tipos de letras
+ *
+ * las fuentes: son tipos especificos de letras.
+ *
+ * los glifos: son cada uno de los dibujos que representan
+ * cada simbolo de la fuente, incluido los espacios.
+ *
+ * los estilos de fuentes: son las modificaciones que se hacen 
+ * a las fuentes, como el grosor o la inclinacion.
+ *
+ * familia tipografica: son las diferentes fuentes 
+ * que pertenecen a una misma fuente base.
+ *
+ * cuando usamos una propiedad text-* estamos afectando a un bloque completo.
+ *
+ * cuando utilizamos una propiedad font-* afectamos a la fuente del texto.
+ *
+ * FUENTES PREDETERMINADAS
+ * son las fuentes que se concideran seguras ya que son genericas y 
+ * no establecen una familia tipografica, si no un estilo de fuente.
+ *     serif: fuentes que tienen serifas (adornos en los caracteres).
+ *     sans-serif: fuente sin serifas.
+ *     monospace: fuente que tiene el mismo espacio entre todos sus caracteres.
+ *     cursive: fuente que pretende emular escritura a mano, con ligaduras y trazos fluidos.
+ *     fantasy: fuentes que suelen ser decorativas.
+ *
+ * ICONOS
+ *     Nota: si vas a usar una gran cantidad de iconos en tu web compensa usar 
+ *     la libreria remota, si solo usaras unos pocos es mejor descargarlos
+ *     en formato svg y utilizarlos como imagenes
+ *
+ * Formatos para fuentes
+ *     True Type Font (TTF) -> fue el primer formato estandar
+ *
+ *     Open True Type Font (OTF) -> facilita o implementa la creacion de las curvas.
+ *
+ *     Web Open Font Format (WOFF) (WOFF2) -> es un formato mucho mas ligero y 
+ *     mejora el rendimiento. funciona atravès de metadatos.
+ *     WOFF tiene soporte total y WOFF2 no funciona en internet explorer.
+ *
+ *     Scalable Vector Graphics (SVG) -> para efectos y animaciones sobre el texto,
+ *     no es recomendable usarlo para el texto generico de la web, tiene muchos problemas.
+ *
+ *     Embedded Open Type (EOT) -> primer formato digital
+ *     propuesto para sitios WEB y es comprimido. se quedo como una propuesta
+ *     pero no paso a ser un estandar.
+ *
+ *     Regla @font-face
+ *     esta es la forma de utilizar fuentes que tenemos descargadas y que no 
+ *     traemos de un servidor remoto, cuando usamos google fonts, esto es 
+ *     lo que esta pasando por detras.
+ *
+ *     La sintaxis empty-cells:
+ *         @font-face {
+ *             font-family: nombre de la familia;
+ *
+ *             src: aqui ponemos dos tipos de valores.
+ *             local() -> pondremos el nombre de la fuente para buscarla 
+ *             en el ordenador del ususario, de esa forma podemos evitar descargarla.
+ *             url() -> si no encontramos esa fuente procederemos a descargarla.
+ *             format() -> este valor lo pasaremos de forma opcional si queremos ser 
+ *             mas especificos con la fuente que vamos a buscar o descargar.
+ *         }
+ *
+ *        podemos añadirle mas valores opcionales como:
+ *        font-style
+ *        font-weight:
+ *        font-display: (experimental)
+ *
+ * Espaciado en fuentes y texto
+ *     letter-space: establece la separacion entre caracteres,
+ *     se puede establecer en cualquier medida valida para css
+ *
+ *     word-spacing: establece la separacion entre palabras
+ *     se puede establecer en cualquier medida valida para css
+ *
+ *     line-height: establece el alto de cada linea, se puede dar 
+ *     una medida concreta o se puede poner un numero que se 
+ *     multiplicara por el font-size del texto al que se lo estemos aplicando.
+ *
+ * Orientacion del texto.
+ *     writing-mode: establece la direccion del texto
+ * */
+
+@font-face {
+    font-family: 'gracia';
+    src: url('../fonts/Aileron-Light.otf')
+    /* src: url('../fonts/GreatVibes-Regular.ttf') */
+}
+
+body {
+    color: grey;
+    font-size: 1rem;
+    background-color: hsl(120, 0%, 20%);
+    font-family: gracia;
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-weight: 700; */
+    /* font-family: serif; */
+    /* font-family: sans-serif; */
+    /* font-family: cursive; */
+    /* font-family: fantasy; */
+    /* font-family: monospace; */
+}
+
+.text {
+    /*line-height: 2;    */
+}
+
+.icon {
+    font-size: 50px; 
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: #fafafa;
+}
+
+.letter {
+    font-size: 2rem;
+    /*word-spacing: 10px;*/
+    letter-spacing: 1px;
+    /*writing-mode: vertical-lr;*/
+}
+

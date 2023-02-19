@@ -1,0 +1,31 @@
+/* position fixed */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #444444;
+    color: #fafafa;
+    padding-top: 90px;
+}
+
+.header {
+    text-align: center;
+    padding: 25px 0;
+    background-color: lightblue;
+    color: blue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.link {
+    position: fixed;
+    width: 300px;
+    background-color: lightpink;
+    color: red;
+    left: 250px;
+    text-align: center;
+}
+

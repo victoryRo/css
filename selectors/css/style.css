@@ -1,0 +1,181 @@
+/* SELECTORS */
+
+/* 
+ * selectores simples
+ *     seletores elementales
+ *         selector universal -> *
+ *         selector de tipo (etiqueta) -> nombre de la etiqueta
+ *     selectores de atributo
+ *         id    -> id del elemento
+ *         class -> clase del elemento
+ *         otros atributos
+ *             solo el atributo.
+ *             [atributo] === [href]
+ *             valor exacto.
+ *             [atributo=valor] === [href="https://google.com"]
+ *             valor al principio.
+ *             [atributo^=valor] === [href^="color"]
+ *             valor any part.
+ *             [atributo*=valor] === [href*="modo"] 
+ *             valor at the and.
+ *             [atributo$=valor] === [href$="green"]
+ *             compatible si lleva guion hello-go-come
+ *             [atributo|=valor] === [href|="es-GB"]
+ *
+ * selectores compuestos
+ *     selectores agrupados
+ *         separados por (,) podemos agrupar varios selectores
+ *         para un mismo estilo
+ *     selectores combinadores
+ *         selector decendiente
+ *         selector de hermano siguiente +
+ *         selector de hermanos siguientes ~
+ *         selector de hijo directo >
+ *             selecciona solo los hijos directos
+ **/
+/* -------------------------- selectores elementales -------------------------- */
+/*
+
+* {
+    background-color: slategray;    
+}
+
+h1 {
+    background-color: skyblue;
+}
+
+p {
+    color: lightgreen;
+}
+
+ul {
+    background-color: darkslategray;
+}
+
+li {
+    background-color: lightpink;
+    color: yellow
+}
+*/ 
+
+/* -------------------------- selectores de atributo -------------------------- */
+
+/* /1* los selectores id son sensitive (title es != Title) *1/ */
+/* #title { */
+/*     background-color: lightcoral; */
+/* } */
+
+/* /1* los selectores class son sensitive (title es != Title) *1/ */
+/* .title { */
+/*     background-color: lightpink; */
+/* } */
+
+/* .text { */
+/*     background-color: skyblue; */
+/* } */
+
+/* .t-color { */
+/*     color: royalblue; */
+/* } */
+
+/* ------------------------------ otros atributos ----------------------------- */
+
+/* only attribute */
+/* [href] { */
+/*     color: white; */
+/* } */
+/* exact value*/
+/* [href="https://google.com"] { */
+/*     color: black; */
+/*     background-color: gold; */ 
+/* } */
+/* first value */
+/* [href^="color"] { */
+/*     background-color: green; */
+/* } */
+/* any part value */
+/* [href*="modo"] { */
+/*     background-color: lightcoral; */
+/* } */
+/* value at the end */
+/* [href$="red"] { */
+/*     background-color: darkred; */
+/* } */
+/* value at the and */
+/* [href$="green"] { */
+/*     color: #000; */
+/*     background-color: greenyellow; */
+/* } */
+/* script compatible (es-GB-maria) con guion */
+/* [lang|="es"] { */
+/*     background-color: slategray; */
+/* } */
+
+/* --------------------------- selectores agrupados --------------------------- */
+
+/*
+.text,
+.text-1,
+.text-2,
+.text-3,
+.text-4
+{
+    background-color: teal;
+}
+*/
+
+/* ------------------- selectores combinadores decendientes ------------------- */
+/*
+    combinamos diferentes tags y class hasta llegar
+    la elemento elejido.
+    las buenas parcticas recomiendan no bajar mas 
+    de un nivel.
+*/
+
+/*
+div .title-2 { 
+    background-color: lightpink;
+}
+
+html body div .title-2 { 
+    background-color: skyblue;
+}
+
+body .title-2 { 
+    background-color: cyan;
+}
+*/
+
+/* --------------- selectores combinadores de hermano siguiente --------------- */
+
+/* solo afecta al hermano siguiente con el simbolo + 
+ * las buenas practicas recomiendan no bajar mas de un niveles
+ */
+
+/*
+.title-2 + .new-title {
+    background-color: cyan;
+}
+
+.text-1 + p {
+    background-color: tomato;
+}
+
+div + ul {
+    background-color: lightgreen;
+}
+*/
+
+/* afecta todos los hermanos siguientes con el simbolo ~ 
+ * las buenas practicas recomiendan no bajar mas de un niveles
+ */
+
+/* .text-1 ~ p { */
+/*     background-color: green; */
+/* } */
+
+/* ------------------ selectores combinadores de hijo directo ----------------- */
+
+.container > p {
+    background-color: skyblue;
+}

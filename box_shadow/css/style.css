@@ -1,0 +1,42 @@
+/* 
+ * box-shadow -> añade efectos de sombra 
+ *
+ * en esencia es crear un clon de la caja respetando la forma 
+ * de su box-model (ancho, alto, redondes)
+ * 
+ * los valores son:
+ *     offset-x -> desplazamiento en x (obligatorio)
+ *     offset-y -> desplazamiento en y (obligatorio)
+ *     blur-radius -> desenfoque de la sombra
+ *     spread-radius -> expancion de la sombra
+ *     color -> si no se especificamos lo hereda al elemento perteneciente
+ *     inset -> determina si la sombra sera interior o exterior
+ * */
+
+* {
+    box-sizing: border-box;
+}
+
+.title {
+    color: gray;
+    margin-bottom: 100px;
+}
+
+.box-link {
+    background-color: lightseagreen;
+    width: 200px;
+    padding: 50px;
+    border-radius: 20px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    text-decoration: none;
+    /* values: inset x, y, difumin, padding */
+    box-shadow: inset 5px 5px 10px 3px;
+    /* we can make several shadows one after another */
+
+}
+
+
+

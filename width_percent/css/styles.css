@@ -1,0 +1,78 @@
+/* HEIGHT: % -> cuando estamos dentro de un contenedor este tiene que tener 
+ *   un alto declarado, si no no podra calcular el porcentaje. si se
+ *   le aplica un medida con porcentaje se sustituira automaticamente
+ *   por auto.
+ *
+ *   auto -> cuando utilizamos auto el alto lo calcula el navegador 
+ *   en base al contenido del elemento
+ *
+ *   NOTA: Height es una propiedad que tienes que usar con mucho cuidado.
+ *   si no es necesario establecer un alto dejad que el contenido sea el 
+ *   que decida el alto del elemento.
+ * */
+
+/* 
+ * VIEWPORT
+ *     el viewport es el area util donde se mostrara la pagina web.
+ *     Importante: tened en cuenta que es el area visible sin hacer scroll.
+ * Podemos usar el viewport como medida de varias formas:
+ *     vw -> viewport width, hace referencia al ancho.
+ *     vh -> viewport height, hace referencia al alto.
+ *     vmax -> utiliza el valor mas grande entre el ancho y el alto.
+ *     vmin -> utiliza el valor mas peque√±o entre el ancho y el alto.
+ *
+ *     1vw -> 1% del ancho del viewport
+ *     1vh -> 1% del alto del viewport
+ *     1vmin 1% del valor que sea mas peque√±o del viewport
+ *     1vmax 1% del valor que sea mas grade del viewport
+ *
+ * Limitadores de ancho y alto:
+ *     cuando establecemos un width y/o un height con una medida que es relativa,
+ *     es posible que no queramos que se respete esa medida en todos los casos.
+ *     para ello tenemos propiedades que limitan esas medidas:
+ *         min-width: indica el ancho minimo que puede alcazar el elemento.
+ *         max-widt: indica el ancho maximo que puede alcazar el elemento.
+ *         min-height: indica el alto minimo que que puede alcanzar el elemento.
+ *         max-height: indica el alto maximo que puede alcanzar el elemento.
+ * */
+
+body {
+    margin: 0;
+    background-color: #444;
+    color: #1a1a12;
+}
+
+.header {
+    background-color: lightgreen;
+    text-align: center;
+    /* height: 100vh; */
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: lightgreen;
+}
+
+.box-children {
+    position: sticky;
+    top: 0;
+    /* width: 50vw; */
+    /* width: 100vmin; */
+    width: 30vmax;
+    height: 150px;
+    background-color: lightseagreen;
+}
+
+/* width and height lessons (min max)*/
+
+.box-w {
+    /* width: 100%; */
+    max-width: 700px;
+    min-width: 350px;
+    height: 60vw;
+    max-height: 300px;
+    min-height: 100px;
+    background-color: lightsalmon;
+}
+
